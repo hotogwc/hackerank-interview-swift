@@ -15,7 +15,11 @@ final class hackerank_interviewTests: XCTestCase {
         let result = HourGlass.hourglassSum(arr: source)
         XCTAssertEqual(19, result)
     }
-
+    
+    func testLeftRotation() {
+        let result = LeftRotation.rotLeft(a: [1,2,3,4,5], d: 4)
+        XCTAssertEqual([5,1,2,3,4], result)
+    }
 
     static var allTests = [
         ("testHourGlass", testHourGlass)
