@@ -20,8 +20,9 @@ final class hackerank_interviewTests: XCTestCase {
         let result = LeftRotation.rotLeft(a: [1,2,3,4,5], d: 4)
         XCTAssertEqual([5,1,2,3,4], result)
     }
-
+    
     static var allTests = [
-        ("testHourGlass", testHourGlass)
+        ("testHourGlass", testHourGlass),
+        ("testLeftRotation", testLeftRotation)
     ]
 }
