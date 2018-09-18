@@ -1,7 +1,7 @@
 import XCTest
 @testable import hackerank_interview
 
-final class hackerank_interviewTests: XCTestCase {
+final class ArrayTests: XCTestCase {
     
     func testHourGlass() {
         let source = [
@@ -35,6 +35,8 @@ final class hackerank_interviewTests: XCTestCase {
         ]
         XCTAssertEqual(200, arrayManipulation(n: 5, queries: input))
     }
+    
+    
     
     static var allTests = [
         ("testHourGlass", testHourGlass),
