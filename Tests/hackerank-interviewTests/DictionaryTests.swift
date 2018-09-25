@@ -38,8 +38,5 @@ class DictionaryTests: XCTestCase {
     static var allTests = [
         ("testAnagram", testAnagram),
         ("testCountTriplets", testCountTriplets)
-//        ("testLeftRotation", testLeftRotation),
-//        ("testMinimumSwaps", testMinimumSwaps),
-//        ("testArrayManipulation", testArrayManipulation)
     ]
 }

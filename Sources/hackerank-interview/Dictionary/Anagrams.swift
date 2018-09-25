@@ -28,10 +28,10 @@ func sherlockAndAnagrams(s: String) -> Int {
     for (_, v) in map {
         count += v * (v - 1) / 2
     }
-    
-    return count
-}
 
+    return count
+    
+}
 
 func getAllSubStrings(s: String) -> [String] {
     
