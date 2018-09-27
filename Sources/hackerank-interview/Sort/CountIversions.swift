@@ -50,7 +50,6 @@ func merge(leftPile: [Int], rightPile: [Int]) -> [Int] {
         }
     }
     
-    // 4
     while leftIndex < leftPile.count {
         orderedPile.append(leftPile[leftIndex])
         leftIndex += 1
