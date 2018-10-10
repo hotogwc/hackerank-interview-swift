@@ -13,7 +13,7 @@ func letterCasePermutation(_ S: String) -> [String] {
     var chars = Array(S)
     var result = [String]()
     
-    dfs(arr: &chars, result: &result, index: 0)
+    dfs(chars: &chars, result: &result, index: 0)
     return result
 }
 
@@ -24,21 +24,22 @@ func isDigit(c: Character) -> Bool {
 }
 
 
-func dfs(arr: inout [Character], result: inout [String], index: Int) {
-    if index == arr.count {
-        result.append(String(arr))
+func dfs(chars: inout [Character], result: inout [String], index: Int) {
+    if index == chars.count {
+        result.append(String(chars))
         return
     }
     
-    if !isDigit(c: arr[index]) {
-        arr[index] = Array(String(arr[index]).lowercased())[0]
-        dfs(arr: &arr, result: &result, index: index + 1)
-        arr[index] = Array(String(arr[index]).uppercased())[0]
-        dfs(arr: &arr, result: &result, index: index + 1)
-        
+    if !isDigit(c: chars[index]) {
+        //update chars
+        chars[index] = Array(String(chars[index]).lowercased())[0]
+        dfs(chars: &chars, result: &result, index: index + 1)
+        chars[index] = Array(String(chars[index]).uppercased())[0]
+        dfs(chars: &chars, result: &result, index: index + 1)
     } else {
-        dfs(arr: &arr, result: &result, index: index + 1)
+        dfs(chars: &chars, result: &result, index: index + 1)
     }
+    
 }
 
 
